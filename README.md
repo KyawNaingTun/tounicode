@@ -1,7 +1,7 @@
 # ToUnicode (Zawgyi to Unicode Converter)
 ဇော်ဂျီဖြင့် ရေးသားထားသော input values များကို unicode(ယူနီကုဒ်) အဖြစ်ပေြာင်းလဲပေးမယ့် laravel package လေးတစ်ခုပါ။ လောလောဆယ်တော့  Laravel5 အတွက်ပဲရပါဦးမယ်။
 #### composer နဲ့ဘယ်လိုယူရမလဲ?
-``` composer require kknts/tounicode ```
+``` composer require kyawnaingtun/tounicode dev-master```
 #### ထည့်သွင်းအသုံးပြုပုံ
 composer နဲ့ package ကိုရပြီးပြီဆိုရင် providers array (```config/app.php```)ထဲသို့  package ရဲ့ service provider ထဲပေးပါ။
 
