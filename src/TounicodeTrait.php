@@ -10,12 +10,12 @@ trait TounicodeTrait{
    */
   public function toUnicode($value){
    // perform a case-Insensitive search for the word "Vi"
-   $regex = "/\s\1031| ေ[က-အ]်|[က-အ]း/i";
-   if (preg_match($regex, $value, $match)) :
-      print "Match found!";
-    endif;
+  //  $regex = "/\s\1031| ေ[က-အ]်|[က-အ]း/i";
+  //  if (preg_match($regex, $value, $match)) :
+  //     print "Match found!";
+  //   endif;
 
-    // return $this->replaceWithRule($value);
+    return $this->replaceWithRule($value);
   }
 
   /**
