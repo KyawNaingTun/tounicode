@@ -5,6 +5,8 @@
 
 ဇော်ဂျီဖြင့် ရေးသားထားသော input values များကို unicode(ယူနီကုဒ်) အဖြစ်ပေြာင်းလဲပေးမယ့် laravel package လေးတစ်ခုပါ။ လောလောဆယ်တော့  Laravel5 အတွက်ပဲရပါဦးမယ်။ Zawgyi Unicode အား auto detect သိဖို့ရန်အတွက် ကူညီပေးသော ကွီးဖြိုးဇော်ထွန်း အား အထူးကျေးဇူးတင်ရှိပါသည်။ :D
 
+AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမှာ](https://github.com/KyawNaingTun/ng-z2u-converter) လာယူပါ။
+
 ### composer နဲ့ဘယ်လိုယူရမလဲ?
 ```composer require "kyawnaingtun/tounicode:1.1"```
 #### OR
