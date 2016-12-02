@@ -10,10 +10,9 @@
 or
 ```json
 "require": {
-        --
-        "kyawaningtun/tounicode": "1.1";
+        "kyawaningtun/tounicode": "1.1"
     },
-// require လုပ်ပြီးလျှင် composer update 
+// require လုပ်ပြီးလျှင် composer update
 ```
 #### ထည့်သွင်းအသုံးပြုပုံ
 composer နဲ့ package ကိုရပြီးပြီဆိုရင် providers array (```config/app.php```)ထဲသို့  package ရဲ့ service provider ထဲပေးပါ။
