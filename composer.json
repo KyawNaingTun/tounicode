@@ -1,0 +1,22 @@
+{
+    "name": "kknts/tounicode",
+    "description": "\"Laravel zawgyi to unicode converter\"",
+    "license": "MIT",
+    "homepage": "https://github.com/KyawNaingTun/tounicode",
+    "authors": [
+        {
+            "name": "Kyaw Naing Tun",
+            "email": "kyawnainghtun93@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Kyawnaingtun\\Tounicode\\": "packages/kyawnaingtun/tounicode/src"
+        }
+    },
+    "require": {
+      "php": ">=5.6.4"
+    }
+
+}
