@@ -2,8 +2,10 @@
 [![Packagist Downloads](https://img.shields.io/packagist/dt/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 [![Stable version](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 [![License](https://img.shields.io/packagist/l/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/milon/barcode)
+
 ဇော်ဂျီဖြင့် ရေးသားထားသော input values များကို unicode(ယူနီကုဒ်) အဖြစ်ပေြာင်းလဲပေးမယ့် laravel package လေးတစ်ခုပါ။ လောလောဆယ်တော့  Laravel5 အတွက်ပဲရပါဦးမယ်။ Zawgyi Unicode languages အား auto detect သိဖို့ရန်အတွက် ကူညီပေးသော ကွီးဖြိုးဇော်ထွန်း အား အထူးကျေးဇူးတင်ရှိပါသည်။ :D
-#### composer နဲ့ဘယ်လိုယူရမလဲ?
+
+### composer နဲ့ဘယ်လိုယူရမလဲ?
 ``` composer require kknts/tounicode ```
 #### ထည့်သွင်းအသုံးပြုပုံ
 composer နဲ့ package ကိုရပြီးပြီဆိုရင် providers array (```config/app.php```)ထဲသို့  package ရဲ့ service provider ထဲပေးပါ။
@@ -16,7 +18,7 @@ composer နဲ့ package ကိုရပြီးပြီဆိုရင် p
 ]
 ```
 
-#### Model မှအသုံးပြုပုံ
+### Model မှအသုံးပြုပုံ
 အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း trait ကို ထည့်ပါ။ ကွျန်တော်ကတော့ auto convert ဖြစ်အောင် mutator နဲ့ define လုပ်လိုက်ပါတယ်။
 ```php
 # model/post.php
@@ -38,7 +40,7 @@ class Post extends Model
 ```
 အထက်က mutator ကတော့ post table ထဲက content attribute တစ်ခုတည်းကို convert လုပ်လိုက်တာပါ။
 
-#### Controller မှအသုံးပြုပုံ
+### Controller မှအသုံးပြုပုံ
 Model ကနေ  အသုံးမပြုချင်ဘူးဆိုရင် Controller ကနေလည်း အသုံးပြုနိုင်ပါတယ်။
 ```php
 namespace App\Http\Controllers;
