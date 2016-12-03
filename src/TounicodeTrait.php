@@ -17,6 +17,7 @@ trait TounicodeTrait{
     }
   }
   /**
+   * CD.Ko Phyo Zaw Tun
    * [defineUnicodeRule description]
    * @param  [string] $value [user's input value]
    * @return [string]        [output result]
