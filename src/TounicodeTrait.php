@@ -1,6 +1,9 @@
 <?php
 namespace Kyawnaingtun\Tounicode;
-
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Database\Query\Builder as QueryBuilder;
 trait TounicodeTrait{
 
   /**
@@ -10,11 +13,31 @@ trait TounicodeTrait{
    */
   public function toUnicode($value){
     $inputValue = $this->testZgOrUni($value);
-    if($inputValue == "ZawGyi") {
+    if($inputValue == "zg" || $inputValue == "mm") {
       return $this->replaceWithRule($value);
     }else{
       return $value;//if others, return origin value
     }
+  }
+  /**
+   * CD.Ko Phyo Zaw Tun
+   * [defineUnicodeRule description]
+   * @param  [string] $value [user's input value]
+   * @return [string]        [output result]
+   */
+  public function checkFontType($value){
+      $regexUni = '/[ဃငဆဇဈဉညဋဌဍဎဏဒဓနဘရဝဟဠအ]်|ျ[က-အ]ါ|ျ[ါ-း]|\x{103e}|\x{103f}|\x{1031}[^\x{1000}-\x{1021}\x{103b}\x{1040}\x{106a}\x{106b}\x{107e}-\x{1084}\x{108f}\x{1090}]|\x{1031}$|\x{1031}[က-အ]\x{1032}|\x{1025}\x{102f}|\x{103c}\x{103d}[\x{1000}-\x{1001}]|ည်း|ျင်း|င်|န်း|ျာ|င့်/u';
+      $regexZG = '/\s\x{1031}| ေ[က-အ]်|[က-အ]း/u';
+      $regexMM = '/[\x{1000}-\x{109f}\x{aa60}-\x{aa7f}]+/u';
+
+      if(preg_match($regexUni,$value))
+          return "uni";
+      else if(preg_match($regexZG,$value))
+          return "zg";
+      else if(preg_match($regexMM,$value))
+          return "mm";
+      else
+          return "eng";
   }
   /**
    * CD.Ko Phyo Zaw Tun
@@ -28,13 +51,13 @@ trait TounicodeTrait{
       $regexMM = '/[\x{1000}-\x{109f}\x{aa60}-\x{aa7f}]+/u';
 
       if(preg_match($regexUni,$value))
-          return "Unicode";
+          return "uni";
       else if(preg_match($regexZG,$value))
-          return "ZawGyi";
+          return "zg";
       else if(preg_match($regexMM,$value))
-          return "Myanmar";
+          return "mm";
       else
-          return "NotMyanmar";
+          return "eng";
   }
 
   /**
