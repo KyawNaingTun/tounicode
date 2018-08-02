@@ -1,4 +1,4 @@
-# ToUnicode (Laravel 5 Zawgyi to Unicode Converter)
+# ToUnicode (Laravel Zawgyi to Unicode Converter)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 [![Stable version](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 [![License](https://img.shields.io/packagist/l/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/milon/barcode)
@@ -8,17 +8,17 @@
 AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမှာ](https://github.com/KyawNaingTun/ng-z2u-converter) လာယူပါ။
 
 ### composer နဲ့ဘယ်လိုယူရမလဲ?
-```composer require "kyawnaingtun/tounicode:2.0"```
+```composer require "kyawnaingtun/tounicode"```
 #### OR
 ```json
 "require": {
-        "kyawaningtun/tounicode": "2.0"
+        "kyawaningtun/tounicode": "v2.0"
     },
 // require လုပ်ပြီးလျှင် composer update 
 ```
 
 ### Auto Convertion on Save
-အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း TounicodeTrait ကို ထည့်ပါ၊ ပြီးရင် TounicodeModelInterface ကို implements လုပ်ပေးပါ။ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ protected $convertable=[] ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သညါ။
+အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း ```TounicodeTrait``` ကို ထည့်ပါ၊ ပြီးရင် ```TounicodeModelInterface``` ကို implements လုပ်ပေးပါ။ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ ```protected $convertable=[]``` ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သညါ။
 ```php
 # model/post.php
 namespace App;
