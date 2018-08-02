@@ -1,7 +1,6 @@
 # ToUnicode (Laravel Zawgyi to Unicode Converter)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
-[![Stable version](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
-[![License](https://img.shields.io/packagist/l/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/milon/barcode)
+[![Stable Version](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
+[![Download](https://img.shields.io/packagist/dt/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 
 ဇော်ဂျီဖြင့် ရေးသားထားသော input values များကို unicode(ယူနီကုဒ်) အဖြစ် automatice ပြောင်းလဲပေးမည့် laravel package လေးတစ်ခုပါ။ Zawgyi Unicode အား auto detect သိဖို့ရန်အတွက် ကူညီပေးသော ကွီးဖြိုးဇော်ထွန်း အား အထူးကျေးဇူးတင်ရှိပါသည်။ :D (မှတ်ချက်။။ converter ၏ unicode font သို့ ပြောင်းလဲမှုသည် ၁၀၀% မမှန်နိုင်ပါ။)
 
@@ -10,7 +9,6 @@ AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမ�
 ### composer နဲ့ဘယ်လိုယူရမလဲ?
 ```composer require "kyawnaingtun/tounicode"```
 #### OR
-```json
 "require": {
         "kyawaningtun/tounicode": "v2.0"
     },
@@ -47,7 +45,7 @@ class Post extends Model implements TounicodeModelInterface
 ```
 
 ### Conclusion
-ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပုိင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ ဒီထက် ပိုကောင်းဖို့အတွက်လည်း ဆက်လက် လုပ်ဆောင်သွားပါမယ်။
+ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပုိင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ 
 
 
 ### Credits
