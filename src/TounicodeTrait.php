@@ -16,7 +16,10 @@ trait TounicodeTrait{
      */
     public static function bootTounicodeTrait()
     {
-        static::observe(new TounicodeModelObserver());
+        // static::observe(new TounicodeModelObserver());
+        static::saving(function ($model) {
+			$model->convertAttributes();
+		});
     }
     /**
      * Get the convertable attributes.
@@ -28,41 +31,10 @@ trait TounicodeTrait{
         return $this->convertable ?: [];
     }
     /**
-     * Set the convertable attributes.
-     *
-     * @param array $attributes to convert
-     */
-    public function setConvertable(array $attributes)
-    {
-        $this->convertable = $attributes;
-    }
-    
-    /**
-     * Returns whether or not the model will convert
-     * attributes before saving.
-     *
-     * @return bool
-     */
-    public function getConvertion()
-    {
-        return $this->convertion;
-    }
-     /**
-     * Set whether or not the model will convert attributes
-     * before saving.
-     *
-     * @param  bool
-     */
-    public function setConvertion($value)
-    {
-        $this->convertion = (bool) $value;
-    }
-    /**
      * Convert attributes that should be converted.
      */
     public function convertAttributes()
     {
-        \Log::info($this->getConvertable());
         foreach ($this->getConvertable() as $attribute) {
             $this->setConvertionAttribute($attribute, $this->getAttribute($attribute));
         }

@@ -10,7 +10,7 @@ AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမ�
 ```composer require "kyawnaingtun/tounicode"```
 
 ### Auto Convert on Save
-အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း ```TounicodeTrait``` ကို ထည့်ပါ၊ ပြီးရင် ```TounicodeModelInterface``` ကို implements လုပ်ပေးပါ။ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ ```protected $convertable=[]``` ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သညါ။
+အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း ```TounicodeTrait``` ကို ထည့်ပါ၊ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ ```protected $convertable=[]``` ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သညါ။
 ```php
 # model/post.php
 namespace App;
@@ -18,9 +18,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 use Kyawnaingtun\Tounicode\TounicodeTrait;
-use Kyawnaingtun\Tounicode\Contracts\TounicodeModelInterface;
 
-class Post extends Model implements TounicodeModelInterface
+class Post extends Model
 {
     use TounicodeTrait;
 
