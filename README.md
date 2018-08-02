@@ -16,16 +16,6 @@ AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမ�
     },
 // require လုပ်ပြီးလျှင် composer update
 ```
-### Service provider ထည့်သွင်းအသုံးပြုပုံ
-composer နဲ့ package ကိုရပြီးပြီဆိုရင် providers array (```config/app.php```)ထဲသို့  package ရဲ့ service provider ထဲပေးပါ။
-
-```php
-'providers' => [
-    ...
-    Kyawnaingtun\Tounicode\TounicodeServiceProvider::class,
-    ...
-]
-```
 
 ### Model မှအသုံးပြုပုံ
 အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း trait ကို ထည့်ပါ။ ကွျန်တော်ကတော့ auto convert ဖြစ်အောင် mutator နဲ့ define လုပ်လိုက်ပါတယ်။
