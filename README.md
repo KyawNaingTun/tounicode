@@ -1,5 +1,5 @@
 # ToUnicode (Laravel Zawgyi to Unicode Converter)
-[![2.0](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
+[![Master](https://img.shields.io/packagist/v/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 [![Download](https://img.shields.io/packagist/dt/kyawnaingtun/tounicode.svg)](https://packagist.org/packages/kyawnaingtun/tounicode)
 
 ဇော်ဂျီဖြင့် ရေးသားထားသော input values များကို unicode(ယူနီကုဒ်) အဖြစ် automatic ပြောင်းလဲပေးမည့် laravel package လေးတစ်ခုပါ။ Zawgyi Unicode အား auto detect သိဖို့ရန်အတွက် ကူညီပေးသော ကွီးဖြိုးဇော်ထွန်း အား အထူးကျေးဇူးတင်ရှိပါသည်။ :D (မှတ်ချက်။။ converter ၏ unicode font သို့ ပြောင်းလဲမှုသည် ၁၀၀% မမှန်နိုင်ပါ။)
