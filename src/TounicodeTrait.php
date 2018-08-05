@@ -17,6 +17,7 @@ trait TounicodeTrait{
     public static function bootTounicodeTrait()
     {
         // static::observe(new TounicodeModelObserver());
+        
         static::saving(function ($model) {
 			$model->convertAttributes();
 		});
