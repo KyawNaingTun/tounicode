@@ -12,7 +12,10 @@
     "autoload": {
         "psr-4": {
             "Kyawnaingtun\\Tounicode\\": "src"
-        }
+        },
+        "files": [
+            "src/convert-helper.php"
+        ]
     },
     "require": {
         "php": ">=5.6.4"
