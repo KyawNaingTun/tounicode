@@ -37,9 +37,20 @@ class Post extends Model
 }
 ```
 ### Use helper
-သင်ပြောင်းလဲလိုသော value ကို အောက်ပါ function အသုံးပြုပြီး ပြောင်းလဲနိုင်သည်
-
-``` tounicode($value); ```
+သင်ပြောင်းလဲလိုသော value ကို အောက်ပါ function အသုံးပြုပြီး ပြောင်းလဲနိုင်သည်။
+```php
+tounicode($value);//will convert to unicode value
+```
+ဖောင့်အမျိုးအစားသိချင်လျှင် အောက်ပါ function ဖြင့်စစ်နိုင်သည်။
+```php
+/**
+ * return string: uni, zg, mm, eng
+ * uni = unicode
+ * zg = zawgyi
+ * mm = myanmar font
+ * eng = english
+checkFontType($value);
+```
 ### Conclusion
 ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပုိင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ 
 
