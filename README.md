@@ -56,6 +56,6 @@ checkFontType($value);
 
 
 ### Credits
-[Ko Phyo Zaw Tun (Miracle Digitech)](https://www.facebook.com/PhyoZawTun)
+[Ko Phyo Zaw Tun (Future ICT Solution)](https://www.facebook.com/PhyoZawTun)
 [Ko Saturngod (Rabbit)](https://github.com/Rabbit-Converter/Rabbit)
 [Ko Satkyar (mmfont)](https://github.com/setkyar/mmfont)
