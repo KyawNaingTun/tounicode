@@ -10,7 +10,7 @@ AngularJs (Front-End) အတွက်ဆိုရင်တော့ [ဒီမ�
 ```composer require kyawnaingtun/tounicode dev-master```
 
 ### Auto Convert on Save
-အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း ```TounicodeTrait``` ကို ထည့်ပါ၊ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ ```protected $convertable=[]``` ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သည်။
+အရင်ဆုံး ယခု converter ကိုအသုံးပြုမည့် Model file ထဲသို့သွားပါ။ အောက်ပါအတိုင်း ```TounicodeTrait``` ကို ထည့်ပါ၊ သင်ပြောင်းလဲလိုသော table field name ကို ဒီထဲမှာ ```protected $convertable=[]``` ထည့်ပေးပါ။ အထက်ပါလုပ်ဆောင်ချက်အားလုံးပြီးပါက၊ ယခု Post model မှ title နှင့် content သည် user ထည့်လိုက်သည့် data မှန်သမျှ အားလုံးကို unicode auto ပြောင်းပေးသွားမည်ဖြစ်သည်။ ထို့အပြင်၊ ယခင်ကရှိနှင့်ပြီးသား Zawgyi content များကိုလည်း Unicode ပြောင်းပြီး ပြန်ထုတ်ပေးမှာ ဖြစ်ပါသည်။
 ```php
 # your-model-folder/post.php
 namespace App;
@@ -49,7 +49,7 @@ tounicode($value);//will convert to unicode value
  * zg = zawgyi
  * mm = myanmar font
  * eng = english
-checkFontType($value);
+    checkFontType($value);
 ```
 ### Conclusion
 ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပိုင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ 
