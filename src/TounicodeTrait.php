@@ -17,9 +17,12 @@ trait TounicodeTrait{
     public static function bootTounicodeTrait()
     {
         // static::observe(new TounicodeModelObserver());
-        
+        static::retrieved(function ($model) {
+            $model->convertAttributes('get');
+        });
+
         static::saving(function ($model) {
-			$model->convertAttributes();
+			$model->convertAttributes('set');
 		});
     }
     /**
@@ -34,11 +37,18 @@ trait TounicodeTrait{
     /**
      * Convert attributes that should be converted.
      */
-    public function convertAttributes()
+    public function convertAttributes($mode)
     {
-        foreach ($this->getConvertable() as $attribute) {
-            $this->setConvertionAttribute($attribute, $this->getAttribute($attribute));
+        if($mode == 'set'){
+            foreach ($this->getConvertable() as $attribute) {
+                $this->setConvertionAttribute($attribute, $this->getAttribute($attribute));
+            }
+        }else{
+            foreach ($this->getConvertable() as $attribute) {
+                $this->getConvertionAttribute($attribute, $this->getAttribute($attribute));
+            }
         }
+        
     }
     /**
      * Set a converted value for a convertable attribute.
@@ -53,6 +63,22 @@ trait TounicodeTrait{
         // Do the converting if it needs it
         if (!empty($value)) {
             $this->attributes[$attribute] = Converter::convert($value);
+        }
+    }
+
+    /**
+     * Get a converted value for a convertable attribute.
+     *
+     * @param string $attribute name
+     * @param string $value     to convert
+     */
+    public function getConvertionAttribute($attribute, $value)
+    {
+        // Get the value which is presumably plain text
+        $this[$attribute] = $value;
+        // Do the converting if it needs it
+        if (!empty($value)) {
+            $this[$attribute] = Converter::convert($value);
         }
     }
     
