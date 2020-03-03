@@ -54,6 +54,13 @@ tounicode($value);//will convert to unicode value
 ### Conclusion
 ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပိုင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ 
 
+## Supported Versions
+
+| Laravel Version | Supported          |
+| ------- | ------------------ |
+| 6.0.*   | :white_check_mark: |
+| 5.0.*   | :white_check_mark: |
+| < 5.0   | :x:                |
 
 ### Credits
 [Ko Phyo Zaw Tun (Future ICT Solution)](https://www.facebook.com/PhyoZawTun)
