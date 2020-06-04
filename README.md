@@ -49,7 +49,8 @@ tounicode($value);//will convert to unicode value
  * zg = zawgyi
  * mm = myanmar font
  * eng = english
-    checkFontType($value);
+ */
+ checkFontType($value);
 ```
 ### Conclusion
 ဒီ laravel package လေးကို အသုံးပြုပြီးတော့ zawgyi နှင့် unicode ပြဿနာအား တစိတ်တပိုင်းဖြေရှင်းနိုင်လိမ့်မည်ဟု ယုံကြည်ပါတယ်။ 
@@ -58,8 +59,8 @@ tounicode($value);//will convert to unicode value
 
 | Laravel Version | Supported          |
 | ------- | ------------------ |
-| 6.0.*   | :white_check_mark: |
-| 5.0.*   | :white_check_mark: |
+| 6.*   | :white_check_mark: |
+| 5.*   | :white_check_mark: |
 | < 5.0   | :x:                |
 
 ### Credits
