@@ -59,7 +59,7 @@ tounicode($value);//will convert to unicode value
 
 | Laravel Version | Supported          |
 | ------- | ------------------ |
-| 9.*   | Ongoing |
+| 9.*   | :white_check_mark: |
 | 8.*   | :white_check_mark: |
 | 7.*   | :white_check_mark: |
 | 6.*   | :white_check_mark: |
