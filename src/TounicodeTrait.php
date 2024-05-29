@@ -3,8 +3,8 @@ namespace Kyawnaingtun\Tounicode;
 use Illuminate\Database\Eloquent\Model;
 use Kyawnaingtun\Tounicode\Services\Converter;
 use Kyawnaingtun\Tounicode\Observers\TounicodeModelObserver;
-trait TounicodeTrait{
-
+trait TounicodeTrait
+{
     /**
      * Whether the model is converting or not.
      *
@@ -18,12 +18,12 @@ trait TounicodeTrait{
     {
         // static::observe(new TounicodeModelObserver());
         static::retrieved(function ($model) {
-            $model->convertAttributes('get');
+            $model->convertAttributes("get");
         });
 
         static::saving(function ($model) {
-			$model->convertAttributes('set');
-		});
+            $model->convertAttributes("set");
+        });
     }
     /**
      * Get the convertable attributes.
@@ -32,23 +32,28 @@ trait TounicodeTrait{
      */
     public function getConvertable()
     {
-        return $this->convertable ?: [];
+        return $this->tounicode ?: [];
     }
     /**
      * Convert attributes that should be converted.
      */
     public function convertAttributes($mode)
     {
-        if($mode == 'set'){
+        if ($mode == "set") {
             foreach ($this->getConvertable() as $attribute) {
-                $this->setConvertionAttribute($attribute, $this->getAttribute($attribute));
+                $this->setConvertionAttribute(
+                    $attribute,
+                    $this->getAttribute($attribute)
+                );
             }
-        }else{
+        } else {
             foreach ($this->getConvertable() as $attribute) {
-                $this->getConvertionAttribute($attribute, $this->getAttribute($attribute));
+                $this->getConvertionAttribute(
+                    $attribute,
+                    $this->getAttribute($attribute)
+                );
             }
         }
-        
     }
     /**
      * Set a converted value for a convertable attribute.
@@ -81,5 +86,4 @@ trait TounicodeTrait{
             $this[$attribute] = Converter::convert($value);
         }
     }
-    
 }

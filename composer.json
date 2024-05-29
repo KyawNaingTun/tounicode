@@ -1,24 +1,26 @@
 {
-    "name": "kyawnaingtun/tounicode",
-    "description": "\"Laravel zawgyi to unicode converter\"",
-    "license": "MIT",
-    "homepage": "https://github.com/KyawNaingTun/tounicode",
-    "authors": [
-        {
-            "name": "Kyaw Naing Tun",
-            "email": "kyawnainghtun93@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Kyawnaingtun\\Tounicode\\": "src"
-        },
-        "files": [
-            "src/convert-helper.php"
-        ]
-    },
-    "require": {
-        "php": ">=5.6.4"
+  "name": "kyawnaingtun/tounicode",
+  "description": "\"Laravel zawgyi to unicode converter\"",
+  "license": "MIT",
+  "homepage": "https://github.com/KyawNaingTun/tounicode",
+  "authors": [
+    {
+      "name": "Kyaw Naing Tun",
+      "email": "kyawnainghtun93@gmail.com"
     }
-
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kyawnaingtun\\Tounicode\\": "src"
+    },
+    "files": ["src/convert-helper.php"]
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["Kyawnaingtun\\Tounicode\\TounicodeServiceProvider"]
+    }
+  },
+  "require": {
+    "php": ">=8.0.0"
+  }
 }
